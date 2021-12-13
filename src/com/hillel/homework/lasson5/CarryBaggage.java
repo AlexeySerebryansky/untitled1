@@ -12,6 +12,7 @@ public class CarryBaggage {
         System.out.println("inter size your baggage (weight, height, depth)  : ");
 
 
+
         int weight = Integer.parseInt((reader.readLine()));
         int height = Integer.parseInt((reader.readLine()));
         int depth = Integer.parseInt((reader.readLine()));
