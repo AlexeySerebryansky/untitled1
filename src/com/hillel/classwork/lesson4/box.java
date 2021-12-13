@@ -11,6 +11,7 @@ public class box {
 
     }
     public static int payment(int weight, int height, int depth){
-return weight*height*depth;
+
+        return weight*height*depth;
     }
 }
