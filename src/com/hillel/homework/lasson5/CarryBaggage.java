@@ -9,7 +9,7 @@ public class CarryBaggage {
 
     public static void main(String[] agrs) throws IOException {
         BufferedReader reader = new BufferedReader((new InputStreamReader(System.in)));
-        System.out.println("inter your dimensions : ");
+        System.out.println("inter size your baggage (weight, height, depth)  : ");
 
 
         int weight = Integer.parseInt((reader.readLine()));
