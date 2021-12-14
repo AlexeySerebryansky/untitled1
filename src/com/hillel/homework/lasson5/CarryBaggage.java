@@ -16,19 +16,17 @@ public class CarryBaggage {
         int weight = Integer.parseInt((reader.readLine()));
         int height = Integer.parseInt((reader.readLine()));
         int depth = Integer.parseInt((reader.readLine()));
-        System.out.println("your size is = " + payment(weight, height, depth));
+        int methods = payment(weight,height,depth);
+        System.out.println("your size is = " + methods);
 
         int carryOnBaggage = 44000;
         int bag = 46600;
 
 
-        if (payment(weight,height,depth) == 0)System.out.println("you have not baggage");
-        if (payment(weight, height, depth)>0 && payment(weight, height, depth)< carryOnBaggage) System.out.println("you have carry on baggage");
-
-        else if (payment(weight, height, depth) > carryOnBaggage && payment(weight, height, depth) < bag)
-            System.out.println("you have baggage ");
-
-        if (payment(weight, height, depth) > bag) System.out.println("you mast pay extra");
+        if (methods == 0)System.out.println("you have not baggage");
+        if (methods>0 && methods< carryOnBaggage) System.out.println("you have carry on baggage");
+        if (methods > carryOnBaggage && methods < bag) System.out.println("you have baggage ");
+        if (methods > bag) System.out.println("you mast pay extra");
 
     }
 
