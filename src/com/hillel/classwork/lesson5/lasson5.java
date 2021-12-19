@@ -1,4 +1,4 @@
-package com.hillel.classwork.lasson5;
+package com.hillel.classwork.lesson5;
 
 public class lasson5 {
     public static void main(String[] agrs) {

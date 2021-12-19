@@ -1,9 +1,8 @@
-package com.hillel.classwork.lasson5;
+package com.hillel.classwork.lesson5;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.nio.Buffer;
 
 public class ifelse {
     public static void main(String[] agrs) throws IOException {

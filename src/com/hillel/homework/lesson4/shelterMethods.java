@@ -1,4 +1,4 @@
-package com.hillel.homework.lasson5;
+package com.hillel.homework.lesson5;
 
 public class shelterMethods {
      public static int eatingCats(int cat, int gramme, int dayInMonth, int nutrition) {

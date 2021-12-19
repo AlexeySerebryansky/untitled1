@@ -1,4 +1,4 @@
-package com.hillel.homework.lasson2;
+package com.hillel.homework.lesson2;
 
 public class ExchangeOfValue2 {
     public static void main(String[] agrs){

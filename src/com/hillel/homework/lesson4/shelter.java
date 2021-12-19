@@ -1,11 +1,10 @@
-package com.hillel.homework.lasson4;
+package com.hillel.homework.lesson4;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.lang.reflect.Method;
 
-import static com.hillel.homework.lasson5.shelterMethods.*;
+import static com.hillel.homework.lesson5.shelterMethods.*;
 
 public class shelter {
 

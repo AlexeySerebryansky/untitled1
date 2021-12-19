@@ -1,4 +1,4 @@
-package com.hillel.homework.lasson5;
+package com.hillel.homework.lesson5;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -32,7 +32,7 @@ public class CarryBaggage {
 
     public static int payment(int weight, int height, int depth) {
 
-        return weight * height * depth;
+        return weight + height + depth;
     }
 
 }
