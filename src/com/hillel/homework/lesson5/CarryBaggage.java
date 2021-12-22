@@ -8,31 +8,35 @@ public class CarryBaggage {
 
 
     public static void main(String[] agrs) throws IOException {
+
         BufferedReader reader = new BufferedReader((new InputStreamReader(System.in)));
         System.out.println("inter size your baggage (weight, height, depth)  : ");
 
 
-
-        int weight = Integer.parseInt((reader.readLine()));
+        int width = Integer.parseInt((reader.readLine()));
         int height = Integer.parseInt((reader.readLine()));
         int depth = Integer.parseInt((reader.readLine()));
-        int methods = payment(weight,height,depth);
-        System.out.println("your size is = " + methods);
-
-        int carryOnBaggage = 44000;
-        int bag = 46600;
 
 
-        if (methods == 0)System.out.println("you have not baggage");
-        if (methods>0 && methods< carryOnBaggage) System.out.println("you have carry on baggage");
-        if (methods > carryOnBaggage && methods < bag) System.out.println("you have baggage ");
-        if (methods > bag) System.out.println("you mast pay extra");
+
+
 
     }
 
-    public static int payment(int weight, int height, int depth) {
+    private static void carryOnBaggage(int width, int height, int depth) {
+        int widthCarryOnBaggage = 20;
+        int heightCarryOnBaggage = 40;
+        int depthCarryOnBaggage = 55;
 
-        return weight + height + depth;
+        int widthBaggage= 22;
+        int heightBaggage= 53;
+        int depthBaggage= 40;
+
+        if (width<= widthCarryOnBaggage && height<=heightCarryOnBaggage && depth<=depthCarryOnBaggage)
+            System.out.println("you have carry-on baggage, have a good flight");
+       // if(width > widthCarryOnBaggage && )
+
     }
+
 
 }

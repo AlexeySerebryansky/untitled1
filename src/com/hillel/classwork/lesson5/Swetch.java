@@ -7,8 +7,11 @@ import java.io.InputStreamReader;
 public class Swetch {
     public static void main(String[] agrs) throws IOException {
         BufferedReader reader = new BufferedReader((new InputStreamReader(System.in)));
+
         System.out.println("inter a number : ");
+
         int number = Integer.parseInt(reader.readLine());
+
         System.out.println("number" + number);
 
         switch (number) {
