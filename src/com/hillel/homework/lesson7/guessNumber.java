@@ -16,18 +16,28 @@ public class guessNumber {
         int lastNumberRandom = 10;
         int random = firstNumberRandom + (int) (Math.random() * lastNumberRandom);
 
-        System.out.println("your number = " + yourNumber);
-        System.out.println("random number = " + random);
 
 
-        while (yourNumber != random);
-        System.out.println("try again");
 
+            while (yourNumber != random) {
 
-        {
-            System.out.println("you win");
+                if (yourNumber < 0 || yourNumber > 10) {
+                    System.out.println("you have to guess a number between 0 and 10. Don`t cheat");
+                    return;
+                }
+
+                System.out.println("your number: " + yourNumber);
+                System.out.println("random number: " + random);
+                System.out.println("tray");
+
+                yourNumber = Integer.parseInt((reader.readLine()));
+                random = firstNumberRandom + (int) (Math.random() * lastNumberRandom);
+
+            }
+            System.out.println("you win, i thought of the number " + random);
+
         }
 
 
     }
-}
+
