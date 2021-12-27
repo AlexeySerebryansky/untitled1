@@ -1,6 +1,6 @@
 package com.hillel.homework.lesson7;
 
-public class UnluckyNumbers {
+public class unluckyNumbers {
     public static void main(String[] args) {
 
 
