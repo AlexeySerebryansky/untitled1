@@ -16,8 +16,8 @@ public class doWhile {
             Thread.sleep(1000);
             i--;
 
-                {
-                    if (stop == 1234)  break;
+            {
+                if (stop == 1234) break;
             }
 
 
