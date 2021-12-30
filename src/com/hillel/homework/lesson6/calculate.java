@@ -11,25 +11,33 @@ public class calculate {
 
         System.out.println("enter your equation :  ");
 
-        double firstNumber = Integer.parseInt((READER.readLine()));
-        String operation = String.valueOf(Integer.parseInt(READER.readLine()));
-        double secondNumber = Integer.parseInt(READER.readLine());
+        String line = READER.readLine().replace(" ", "");
 
 
-        switch (operation) {
-            case "+":
-                System.out.println(firstNumber + secondNumber);
-            case "-":
-                System.out.println(firstNumber - secondNumber);
-            case "/":
-                System.out.println(firstNumber / secondNumber);
-            case "*":
-                System.out.println(firstNumber * secondNumber);
+        if (line.indexOf("-") != -1) {
+            String[] items = line.split("[-]");
+            double equationFirst = Double.parseDouble(items[0]) - Double.parseDouble(items[1]);
+            System.out.println(equationFirst);
+        } else if (line.indexOf("+") != -1) {
+            String[] items = line.split("[+]");
+            double equationFirst = Double.parseDouble(items[0]) + Double.parseDouble(items[1]);
+            System.out.println(equationFirst);
+        } else if (line.indexOf("*") != -1) {
+            String[] items = line.split("[*]");
+            double equationFirst = Double.parseDouble(items[0]) * Double.parseDouble(items[1]);
+            System.out.println(equationFirst);
+        } else if (line.indexOf("/") != -1) {
+            String[] items = line.split("[/]");
+            double equationFirst = Double.parseDouble(items[0]) / Double.parseDouble(items[1]);
+            System.out.println(equationFirst);
+        } else {
+            System.out.println("you have not entered an operation");
         }
-
-
     }
+
+
 }
+
 
 
 
