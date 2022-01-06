@@ -13,7 +13,6 @@ public class calculate {
 
         String line = READER.readLine().replace(" ", "");
 
-
         if (line.indexOf("-") != -1) {
             String[] items = line.split("[-]");
             double equationFirst = Double.parseDouble(items[0]) - Double.parseDouble(items[1]);
