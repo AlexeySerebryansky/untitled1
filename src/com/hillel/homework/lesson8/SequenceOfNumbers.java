@@ -13,30 +13,28 @@ public class SequenceOfNumbers {
 
 
         System.out.println("set the length of the array");
-        int[] SequenceOfNumbers = new int[readLine()];
+        int[] sequenceOfNumbers = new int[readLine()];
 
         System.out.println("fill the array");
-        printArray(SequenceOfNumbers);
-        System.out.println("your numbers : " + Arrays.toString(SequenceOfNumbers));
+        fillingArray(sequenceOfNumbers);
+        System.out.println("your numbers : " + Arrays.toString(sequenceOfNumbers));
 
-        int result = Сheck(SequenceOfNumbers);
-        if (result == SequenceOfNumbers.length - 1) {
-            System.out.println("up");
-        } else if (result * (-1) == SequenceOfNumbers.length - 1) {
-            System.out.println("down");
-        } else {
-            System.out.println("array");
+        boolean result = Сheck(sequenceOfNumbers);
+        if (result==true) {
+            System.out.println("array up");
+        } else if(result==false){
+            System.out.println("array down");
         }
 
 
     }
 
 
-    private static int printArray(int[] SequenceOfNumbers) throws IOException {
+    private static int fillingArray(int[] sequenceOfNumbers) throws IOException {
 
-        for (int i = 0; i < SequenceOfNumbers.length; i++) {
+        for (int i = 0; i < sequenceOfNumbers.length; i++) {
             System.out.println("fill in " + i + " element");
-            SequenceOfNumbers[i] = readLine();
+            sequenceOfNumbers[i] = readLine();
         }
         return 0;
     }
@@ -44,23 +42,21 @@ public class SequenceOfNumbers {
 
     private static int readLine() throws IOException {
         BufferedReader READER = new BufferedReader((new InputStreamReader(System.in)));
-        int Reader = Integer.parseInt(READER.readLine());
-        return Reader;
+        int reader = Integer.parseInt(READER.readLine());
+        return reader;
     }
 
-    private static int Сheck(int[] SequenceOfNumbers)  {
+    private static boolean Сheck(int[] sequenceOfNumbers) {
+        boolean up = true;
 
-        int tipe = 0;
-
-        for (int i = 0; i < SequenceOfNumbers.length - 1; i++) {
-            if (SequenceOfNumbers[i] < SequenceOfNumbers[i + 1]) {
-                tipe++;
-            } else if (SequenceOfNumbers[i] > SequenceOfNumbers[i + 1]) {
-                tipe--;
+        for (int i = 0; i < sequenceOfNumbers.length - 1; i++) {
+            if (sequenceOfNumbers[i] < sequenceOfNumbers[i + 1]) {
+                return true;
+            } else if (sequenceOfNumbers[i] > sequenceOfNumbers[i + 1]) {
+                return false;
             }
         }
-        return tipe;
-
+        return up;
     }
 
 
