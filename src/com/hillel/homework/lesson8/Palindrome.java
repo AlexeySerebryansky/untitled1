@@ -3,20 +3,26 @@ package com.hillel.homework.lesson8;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class Palindrome {
-    private static final BufferedReader READER = new BufferedReader((new InputStreamReader(System.in)));
+    private static final BufferedReader reader = new BufferedReader((new InputStreamReader(System.in)));
 
     public static void main(String[] args) throws IOException {
 
 
-        System.out.println("set the length of the array");
-       String[] palindrome = new String[Integer.parseInt(READER.readLine())];
-        System.out.println("Created an array of length: " + palindrome.length);
-        fillingArray(palindrome);
-        System.out.println(Arrays.toString(palindrome));
+        System.out.println("Enter numbers, with stop to end");
+        List<String> palindrome = new ArrayList<>();
+        while (true) {
+            String input = reader.readLine();
+            if (input = stop) {
+                break;
+            }
+            palindrome.add(input);
+        }
+        System.out.println("You entered: ");
 
 
         if (check(palindrome) == 1) {
@@ -29,22 +35,13 @@ public class Palindrome {
 
     }
 
-    private static String fillingArray(String[] palindrome) throws IOException {
 
-
-        for (int i = 0; i < palindrome.length; i++) {
-
-            palindrome[i] = READER.readLine();
-        }
-        return String.valueOf(0);
-    }
-
-    private static int check(String[] palindrome) {
+    private static int check(List<String> palindrome) {
         int checkPalindrome = 0;
         for (int i = 0; i < palindrome.length; i++) {
-            for (int k = palindrome.length-1 ; k >= 0; k--) {
-                if (palindrome[i] == palindrome[k] ) ;
-                   checkPalindrome = 1;
+            for (int k = palindrome.lenght - 1; k >= 0; k--) {
+                if (palindrome.get(i) == palindrome.get(k)) ;
+                checkPalindrome = 1;
             }
         }
         return checkPalindrome;
