@@ -48,12 +48,13 @@ public class SequenceOfNumbers {
 
     private static boolean Сheck(int[] sequenceOfNumbers) {
         boolean up = true;
+        boolean down = false;
 
         for (int i = 0; i < sequenceOfNumbers.length - 1; i++) {
             if (sequenceOfNumbers[i] < sequenceOfNumbers[i + 1]) {
-                return true;
+                return up;
             } else if (sequenceOfNumbers[i] > sequenceOfNumbers[i + 1]) {
-                return false;
+                return down;
             }
         }
         return up;

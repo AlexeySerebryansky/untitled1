@@ -17,38 +17,38 @@ public class Palindrome {
         List<String> palindrome = new ArrayList<>();
         while (true) {
             String input = reader.readLine();
-            if (input = stop) {
+            //  if (input = stop) {
                 break;
             }
-            palindrome.add(input);
+          //  palindrome.add(input);
         }
-        System.out.println("You entered: ");
+     //   System.out.println("You entered: ");
 
 
-        if (check(palindrome) == 1) {
-            System.out.println("palindrome");
-        } else {
-            System.out.println("non palindrome");
+      //  if (check(palindrome) == 1) {
+           // System.out.println("palindrome");
+       // } else {
+            //System.out.println("non palindrome");
         }
-        System.out.println(check(palindrome));
+        //System.out.println(check(palindrome));
 
 
-    }
+    //}
 
 
-    private static int check(List<String> palindrome) {
-        int checkPalindrome = 0;
-        for (int i = 0; i < palindrome.length; i++) {
-            for (int k = palindrome.lenght - 1; k >= 0; k--) {
-                if (palindrome.get(i) == palindrome.get(k)) ;
-                checkPalindrome = 1;
-            }
-        }
-        return checkPalindrome;
-    }
+    //private static int check(List<String> palindrome) {
+        //int checkPalindrome = 0;
+       // for (int i = 0; i < palindrome.length; i++) {
+        //     for (int k = palindrome.lenght - 1; k >= 0; k--) {
+       //         if (palindrome.get(i) == palindrome.get(k)) ;
+       //         checkPalindrome = 1;
+      //      }
+    //    }
+    //    return checkPalindrome;
+   // }
 
 
-}
+//}
 
 
 
