@@ -19,45 +19,47 @@ public class SequenceOfNumbers {
         fillingArray(sequenceOfNumbers);
         System.out.println("your numbers : " + Arrays.toString(sequenceOfNumbers));
 
-        boolean result = Сheck(sequenceOfNumbers);
-        if (result==true) {
+        int result = check(sequenceOfNumbers);
+        if (result == 1) {
             System.out.println("array up");
-        } else if(result==false){
+        } else if (result == 2) {
             System.out.println("array down");
+        }else{
+            System.out.println("array");
         }
 
 
     }
 
 
-    private static int fillingArray(int[] sequenceOfNumbers) throws IOException {
+    private static void fillingArray(int[] sequenceOfNumbers) throws IOException {
 
         for (int i = 0; i < sequenceOfNumbers.length; i++) {
             System.out.println("fill in " + i + " element");
             sequenceOfNumbers[i] = readLine();
         }
-        return 0;
     }
 
 
     private static int readLine() throws IOException {
         BufferedReader READER = new BufferedReader((new InputStreamReader(System.in)));
-        int reader = Integer.parseInt(READER.readLine());
-        return reader;
+        return Integer.parseInt(READER.readLine());
     }
 
-    private static boolean Сheck(int[] sequenceOfNumbers) {
-        boolean up = true;
-        boolean down = false;
+    private static int check(int[] sequenceOfNumbers) {
+
+        int counter = 0;
 
         for (int i = 0; i < sequenceOfNumbers.length - 1; i++) {
             if (sequenceOfNumbers[i] < sequenceOfNumbers[i + 1]) {
-                return up;
+                return counter+1;
             } else if (sequenceOfNumbers[i] > sequenceOfNumbers[i + 1]) {
-                return down;
+                return counter+2;
+            }else{
+                return counter+3;
             }
         }
-        return up;
+        return counter;
     }
 
 
