@@ -20,14 +20,12 @@ public class NegativeNumbers {
         check(matrix);
 
 
-
-
     }
 
     private static void fillMatrix(int[][] matrix) throws IOException {
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
-                System.out.println("enter number: " + (i+1) + "  " + (j+1) + ";  ");
+                System.out.println("enter number: " + (i + 1) + "  " + (j + 1) + ";  ");
                 matrix[i][j] = reader();
             }
         }
@@ -49,7 +47,7 @@ public class NegativeNumbers {
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
                 if (matrix[i][j] < 0) {
-                    System.out.print("line: " + (i+1) + " - " + "column: " + (j+1) + " ;   ");
+                    System.out.print("line: " + (i + 1) + " - " + "column: " + (j + 1) + " ;   ");
                 }
             }
         }
