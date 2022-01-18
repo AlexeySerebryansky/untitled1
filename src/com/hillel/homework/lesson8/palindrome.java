@@ -38,16 +38,16 @@ public class palindrome {
 
     private static boolean check(String[] palindrome) {
 
-        int count = 0;
+
         for (int i = 0; i < palindrome.length; i++) {
-            if (palindrome[i].charAt(0) == palindrome[palindrome.length - 1 - i].charAt(0)) {
-                count++;
+            if (palindrome[i].charAt(0) != palindrome[palindrome.length - 1 - i].charAt(0)) {
+                return false;
             }
         }
 
-        if (count == palindrome.length) return true;
-        return false;
+        return true;
     }
+
 
 
     private static String reader() throws IOException {

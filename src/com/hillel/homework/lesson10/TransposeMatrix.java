@@ -45,11 +45,12 @@ public class TransposeMatrix {
     }
 
     private static void transposeMatrix(int line, int column, int[][] matrix) {
-        for (int i = 0; i < line; i++) {
-            for (int j = i + 1; j < column; j++) {
-                int temp = matrix[i][j];
-                matrix[i][j] = matrix[j][i];
-                matrix[j][i] = temp;
+
+        int[][]  transposeMatrix = new int[column][line];
+
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix.length; j++) {
+                transposeMatrix[j][i] = matrix[i][j];
             }
         }
     }
