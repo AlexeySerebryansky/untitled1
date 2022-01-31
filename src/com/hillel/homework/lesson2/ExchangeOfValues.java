@@ -14,6 +14,7 @@ public class ExchangeOfValues {
         int a = Integer.parseInt((reader.readLine()));
         int b = Integer.parseInt((reader.readLine()));
 
+
         System.out.println("a= " + a);
         System.out.println("b= "+ b);
     }

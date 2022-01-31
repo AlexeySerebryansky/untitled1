@@ -1,7 +1,6 @@
 package com.hillel.homework.lesson11Cat;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
+
 
 public class CatMain {
 
